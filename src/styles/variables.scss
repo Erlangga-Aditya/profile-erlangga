@@ -1,0 +1,75 @@
+:root {
+  // Deep Dark Sleek Colors (Vercel/Linear Dark Mode)
+  --primary-color: #000000;      // Pure Black Base
+  --secondary-color: #0a0a0a;    // Onyx 
+  --tertiary-color: #111111;     // Very deep grey for cards
+  --accent-color: #ededed;       // Premium White for Accents/Buttons
+  --accent-hover: #cccccc;       // Grey hover for accent buttons
+  
+  // Text Colors
+  --text-dark: #ededed;          // Primary text (Off-white)
+  --text-gray: #a1a1aa;          // Secondary text (Cool gray)
+  --text-light: #71717a;         // Subtitles and tertiary
+  
+  // Borders & Cards (Dark variants)
+  --border-color: #27272a;       // Subtle dark borders
+  --card-bg: #0a0a0a;            // Soft dark for cards
+  
+  // Glassmorphism - Deep Dark Blend
+  --glass-bg: rgba(0, 0, 0, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-blur: blur(24px);
+  
+  // Typography
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+  // Shadows (Dark Mode refined soft glow)
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 24px 64px rgba(0, 0, 0, 0.8);
+  --shadow-hover: 0 32px 80px rgba(0, 0, 0, 0.9);
+  --shadow-glow: 0 0 40px rgba(255, 255, 255, 0.05);
+  
+  // Ultra Smooth Easing
+  --ease-base: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-circ: cubic-bezier(0.85, 0, 0.15, 1);
+  --transition-fast: 0.25s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s var(--ease-out-expo);
+
+  // Border Radius
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+  
+  // Layout Spacing
+  --spacing-section: 10rem;
+  --spacing-section-mobile: 6rem;
+}
+
+// Breakpoints
+$bp-mobile: 480px;
+$bp-tablet: 768px;
+$bp-desktop: 1200px;
+$bp-large: 1600px;
+
+@mixin mobile {
+  @media (max-width: #{$bp-mobile}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$bp-tablet}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: #{$bp-desktop}) {
+    @content;
+  }
+}
