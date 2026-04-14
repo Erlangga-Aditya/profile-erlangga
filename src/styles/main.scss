@@ -327,6 +327,11 @@ button { font-family: inherit; }
 .certificates-grid {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem;
   
+  // Logic Hide/Show Certificates
+  &:not(.show-all) .cert-card:nth-child(n+4) {
+    display: none;
+  }
+  
   .cert-card {
     .cert-image-wrap {
       position: relative; border-radius: var(--radius-md); overflow: hidden;
